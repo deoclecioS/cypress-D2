@@ -29,7 +29,3 @@ steps:
 - script: npm run cy:run:chrome
   displayName: 'Run teste on Chrome'
   continueOnError: true
-
-- script: npm run cy:run:edge
-  displayName: 'Run teste on Edge'
-  continueOnError: true
