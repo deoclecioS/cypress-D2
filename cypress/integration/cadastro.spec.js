@@ -7,7 +7,6 @@ context('cadastro', () => {
         cy.visit('register')
         cadastro.preencherCadastro()
         cadastro.clicarCadastrar()
-        //validar usuario logado
-        //cy.get('[class*="user-pic"]').should('contain', )
+        cadastro.verificacadastro()
     });
 });

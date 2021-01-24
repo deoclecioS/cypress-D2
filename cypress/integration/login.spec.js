@@ -2,7 +2,8 @@
 
 import login from "../support/pages/login"
 
-context('Login',{ browser:'firefox'}, () => {
+
+context('Login', () => {
     it('realizar o login', () => {
 
         //Prepara
@@ -12,6 +13,6 @@ context('Login',{ browser:'firefox'}, () => {
         //sumbeter
         login.clicarSubmeterLogin()
         //Verificar
-        cy.get('[class="nav navbar-nav pull-xs-right"] li').should('contain', 'pipoca')
+        login.verificaSucessoLogin()
     });
 });

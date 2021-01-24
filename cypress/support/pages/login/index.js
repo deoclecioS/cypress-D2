@@ -1,5 +1,6 @@
 
 const elementos = require('./elementos').ELEMENTOS
+import Routes from '../../routes'
 
 class Login {
 
@@ -14,6 +15,12 @@ class Login {
 
     clicarSubmeterLogin() {
         cy.get(elementos.botaoLogin).click()
+    }
+
+    verificaSucessoLogin(){
+        cy.wait(`@${Routes.as.PostLogin}`).then((PostLoginResponse) => {
+            expect(PostLoginResponse.status).to.eq(200)
+        })
     }
 }
 
